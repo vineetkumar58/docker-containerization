@@ -20,6 +20,7 @@ These screenshots contain practice commands executed during learning Docker and 
 ![Practice 3](PracticeCommands/history3.png)
 
 
+
 ## 27th January
 - Started an Ubuntu container using Docker and installed OpenJDK inside the container.
 
@@ -34,6 +35,7 @@ These screenshots contain practice commands executed during learning Docker and 
 ![Docker Image](27thJan/Screenshot%20(36).png)
 
 
+
 ## 28th January
 - created a Dockerfile for a Java application using Ubuntu as base image.
 - built a Docker image from the Dockerfile.
@@ -43,5 +45,18 @@ These screenshots contain practice commands executed during learning Docker and 
 ![Docker Build Process](28thJan/1.jpeg)
 
 ![Image Created](28thJan/2.jpeg)
+
+
+
+## 29th January
+- practiced Markdown syntax for documentation using online tutorial.
+- created headings, subheadings, bold and italic text.
+- created ordered and unordered lists.
+- inserted links and images using markdown format.
+- practiced writing code blocks and inline code.
+- learned how to structure README files properly.
+
+Reference:
+https://www.markdowntutorial.com/
 
 
