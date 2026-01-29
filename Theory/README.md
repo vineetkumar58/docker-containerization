@@ -2,6 +2,22 @@
 
 
 ## commands used ( practiced in class )
+These screenshots contain practice commands executed during learning Docker and containerization such as:
+
+- Checking Docker version  
+- Pulling images  
+- Running containers  
+- Listing containers and images  
+- Building Docker images  
+- Saving and loading images  
+
+### Command History Screenshots
+
+![Practice 1](PracticeCommands/history1.png)
+
+![Practice 2](PracticeCommands/history2.png)
+
+![Practice 3](PracticeCommands/history3.png)
 
 
 ## 27th January
