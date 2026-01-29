@@ -4,7 +4,7 @@
 
 - started an Ubuntu container using Docker and installed OpenJDK inside the container.
 
-![Java Install](27thJan/Screenshot(34).png).
+![Java Install](27thJan/[Screenshot(34).png](https://github.com/vineetkumar58/docker-containerization/blob/main/Theory/27thJan/Screenshot%20(34).png).
 
 - created a simple Java program (Hello.java), compiled it using javac, and executed it inside a Docker container.
 
