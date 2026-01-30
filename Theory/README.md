@@ -60,7 +60,7 @@ https://www.markdowntutorial.com/
 
 
 ## 30th january
-![Java Run](30thJan/1.png)
+![Java Run](30thJan/1.jpeg)
 
 
 
