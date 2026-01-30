@@ -21,7 +21,7 @@ These screenshots contain practice commands executed during learning Docker and 
 
 
 
-## 27th January
+## 27th and 28th January
 - Started an Ubuntu container using Docker and installed OpenJDK inside the container.
 
 ![Java Install](27thJan/Screenshot%20(34).png)
@@ -36,7 +36,6 @@ These screenshots contain practice commands executed during learning Docker and 
 
 
 
-## 28th January
 - created a Dockerfile for a Java application using Ubuntu as base image.
 - built a Docker image from the Dockerfile.
 - verified successful image creation using docker images.
