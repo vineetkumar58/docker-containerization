@@ -11,3 +11,4 @@
 
 ### Experiment 1
 [Open Experiment 1](Lab/Exp1.md)
+[Open Experiment 2](Lab/Exp2.md)
