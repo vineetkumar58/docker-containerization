@@ -10,17 +10,15 @@
 
 ---
 ## STEPS ARE AS FOLLOWS:
-## Pulled Nginx Image from Docker Hub
-## Ran Nginx Container with Port Mapping
-## Verified Running Containers
-## Stopped and Removed Running Container
-## Removed Nginx Image from System
-
+ - Pulled Nginx Image from Docker Hub
+ - Ran Nginx Container with Port Mapping
+ - Verified Running Containers
+ - Stopped and Removed Running Container
+ - Removed Nginx Image from System
+   
 ![Pull Nginx](Screenshots/Exp2/1.png)
 
 ![Run Container](Screenshots/Exp2/2.png)
-
-![Docker PS](Screenshots/Exp2/3.png)
 
 
 ## Result
