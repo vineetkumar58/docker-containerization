@@ -66,7 +66,7 @@ https://www.markdowntutorial.com/
 
 ![Java Run](30thjan/3.jpeg)
 
-![Java Run](30thjan/4.jpeg)
+![Java Run](30thjan/4.png)
 
 
 
