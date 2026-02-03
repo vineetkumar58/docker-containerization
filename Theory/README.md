@@ -73,13 +73,13 @@ https://www.markdowntutorial.com/
 ![Java Run](30thjan/6.jpeg)
 
 
-## 3rd February
-# Docker Engine API – Hands-On (WSL)
+### 3rd February
+ Docker Engine API – Hands-On (WSL)
 
-# Overview
+ Overview
 Studied how Docker CLI commands internally communicate with the Docker daemon using the Docker Engine REST API through a Unix socket.
 
-# What I Learned
+ What I Learned
 - Docker CLI works as a client for Docker Engine API  
 - Docker API uses REST endpoints  
 - Docker socket path: `/var/run/docker.sock`  
