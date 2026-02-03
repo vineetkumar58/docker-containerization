@@ -70,5 +70,15 @@ https://www.markdowntutorial.com/
 
 ![Java Run](30thjan/5.png)
 
+## 3rd February
+![Java Run](3rdfeb/1.jpeg)
+
+![Java Run](3rdfeb/2.jpeg)
+
+![Java Run](3rdfeb/3.jpeg)
+
+![Java Run](3rdfeb/4.png)
+
+![Java Run](3rdfeb/5.png)
 
 
