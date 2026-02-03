@@ -99,7 +99,7 @@ Studied how Docker CLI commands internally communicate with the Docker daemon us
   ![Java Run](3rdfeb/4-2.png)
   
 - Created container using JSON request and Started, stopped, and restarted container using API
-  ![Java Run](3rdfeb/strtstop.jpeg)
+  ![Java Run](3rdfeb/stsrtstop.jpeg)
   
 - Inspected container details
   ![Java Run](3rdfeb/inspect.png)
