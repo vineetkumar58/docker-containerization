@@ -3,7 +3,7 @@
 # Docker & Containerization
 
 ##  Theory
-[Open Theory](Theory/README.md)
+[Open Theory](Theory/)
 
 ---
 
