@@ -21,7 +21,7 @@ These screenshots contain practice commands executed during learning Docker and 
 
 
 
-## 27th and 28th January
+# 27th and 28th January
 - Started an Ubuntu container using Docker and installed OpenJDK inside the container.
 
 ![Java Install](27thJan/Screenshot%20(34).png)
@@ -47,7 +47,7 @@ These screenshots contain practice commands executed during learning Docker and 
 
 
 
-## 29th January
+# 29th January
 - practiced Markdown syntax for documentation using online tutorial.
 - created headings, subheadings, bold and italic text.
 - created ordered and unordered lists.
@@ -59,7 +59,7 @@ Reference:
 https://www.markdowntutorial.com/
 
 
-## 30th january
+# 30th january
 ![Java Run](30thjan/1.jpeg)
 
 ![Java Run](30thjan/2.jpeg)
@@ -73,19 +73,19 @@ https://www.markdowntutorial.com/
 ![Java Run](30thjan/6.jpeg)
 
 
-### 3rd February
-# Docker Engine API – Hands-On (WSL)
+# 3rd February
+## Docker Engine API – Hands-On (WSL)
 
-# Overview
+### Overview
 Studied how Docker CLI commands internally communicate with the Docker daemon using the Docker Engine REST API through a Unix socket.
 
-# What I Learned
+### What I Learned
 - Docker CLI works as a client for Docker Engine API  
 - Docker API uses REST endpoints  
 - Docker socket path: `/var/run/docker.sock`  
 - API is versioned (example: v1.44)
 
-# Hands-On Activities
+### Hands-On Activities
 
 - Verified Docker API socket and connectivity 
 - Retrieved Docker version using API
