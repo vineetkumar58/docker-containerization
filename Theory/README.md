@@ -72,6 +72,7 @@ https://www.markdowntutorial.com/
 
 ![Java Run](30thjan/6.jpeg)
 
+
 ## 3rd February
 # Docker Engine API – Hands-On (WSL)
 
@@ -85,38 +86,53 @@ Studied how Docker CLI commands internally communicate with the Docker daemon us
 - API is versioned (example: v1.44)
 
 ## Hands-On Activities
-- Verified Docker API socket and connectivity  
-- Retrieved Docker version using API  
-- Listed running and all containers using API  
-- Pulled nginx image using API  
-- Created container using JSON request  
-- Started, stopped, and restarted container using API  
-- Inspected container details  
-- Viewed container logs using API  
-- Executed commands inside container using API  
-- Removed containers and images using API  
-- Checked Docker system info and container stats  
+- Verified Docker API socket and connectivity 
+- Retrieved Docker version using API
+  ![Java Run](3rdfeb/1.png)
+  
+- Listed running and all containers using API
+  ![Java Run](3rdfeb/2.png)
+  
+- Pulled nginx image using API
+  ![Java Run](3rdfeb/4-1.png)
 
-![Java Run](3rdfeb/1.png)
+  ![Java Run](3rdfeb/4-2.png)
+  
+- Created container using JSON request and Started, stopped, and restarted container using API
+  ![Java Run](3rdfeb/strtstop.jpeg)
+  
+- Inspected container details
+  ![Java Run](3rdfeb/inspect.png)
+  
+- Viewed container logs using API
+  ![Java Run](3rdfeb/logs1.png)
 
-![Java Run](3rdfeb/2.png)
+  ![Java Run](3rdfeb/logs2.png)
+  
+- Executed commands inside container using API
+  ![Java Run](3rdfeb/exec1.png)
 
-![Java Run](3rdfeb/3.png)
+  ![Java Run](3rdfeb/exec2.png)
+  
+- Removed containers and images using API
+  ![Java Run](3rdfeb/remove.png)
+  
+- Checked Docker system info and container stats
+  ![Java Run](3rdfeb/imageinfo.png) 
 
-![Java Run](3rdfeb/4.png)
 
-![Java Run](3rdfeb/inspect.png)
 
-![Java Run](3rdfeb/logs1.png)
 
-![Java Run](3rdfeb/logs2.png)
 
-![Java Run](3rdfeb/exec1.png)
 
-![Java Run](3rdfeb/exec2.png)
 
-![Java Run](3rdfeb/remove.png)
 
-![Java Run](3rdfeb/imageinfo.png)
+
+
+
+
+
+
+
 
 
