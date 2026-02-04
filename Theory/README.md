@@ -122,6 +122,22 @@ Studied how Docker CLI commands internally communicate with the Docker daemon us
   ![Java Run](3rdfeb/imageinfo.png) 
 
 # 4TH february
+## Docker Engine API over TCP (WSL)
+
+### Overview
+Enabled Docker daemon to listen on TCP port **2375** and accessed Docker Engine API from browser and terminal.
+
+### What I Did
+- Edited Docker daemon configuration to enable TCP host.
+- Restarted Docker service and manually started dockerd.
+- Verified Docker API is listening on port 2375.
+- Opened Docker API in browser.
+- Fetched Docker version using HTTP API.
+
+### What I Learned
+- Docker daemon can expose REST API over TCP.
+- Docker API works without Docker CLI.
+- API version and engine details can be fetched using HTTP.
 
 ![Java Run](4thfeb/1.png) 
 
@@ -131,7 +147,6 @@ Studied how Docker CLI commands internally communicate with the Docker daemon us
 
 ![Java Run](4thfeb/4.png) 
 
-![Java Run](4thfeb/5.png) 
 
 
 
