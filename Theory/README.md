@@ -121,6 +121,17 @@ Studied how Docker CLI commands internally communicate with the Docker daemon us
   
   ![Java Run](3rdfeb/imageinfo.png) 
 
+# 4TH february
+
+![Java Run](4thfeb/1.png) 
+
+![Java Run](4thfeb/2.png) 
+
+![Java Run](4thfeb/3.png) 
+
+![Java Run](4thfeb/4.png) 
+
+![Java Run](4thfeb/5.png) 
 
 
 
