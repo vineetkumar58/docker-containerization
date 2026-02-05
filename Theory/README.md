@@ -147,9 +147,29 @@ Enabled Docker daemon to listen on TCP port **2375** and accessed Docker Engine 
 
 ![Java Run](4thfeb/4.png) 
 
+## 5th february
+### practice test 
 
+Class Test: Containerize a Python Application (Containerization Focus)
+Objective
+The goal of this hands-on is to evaluate your understanding of containerization concepts:
 
+Base images
+Dependency installation
+Image naming and tagging
+Container execution and testing
 
+![Java Run](5thfeb/1.png) 
+
+![Java Run](5thfeb/2.png) 
+
+![Java Run](5thfeb/3.png) 
+
+![Java Run](5thfeb/4.png) 
+
+![Java Run](5thfeb/5.png) 
+
+![Java Run](5thfeb/6.png) 
 
 
 
