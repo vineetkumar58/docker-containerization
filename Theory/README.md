@@ -75,7 +75,6 @@ https://www.markdowntutorial.com/
 
 # 3rd February
 ## Docker Engine API – Hands-On (WSL)
-
 ### Overview
 Studied how Docker CLI commands internally communicate with the Docker daemon using the Docker Engine REST API through a Unix socket.
 
