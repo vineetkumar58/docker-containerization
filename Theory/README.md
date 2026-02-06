@@ -170,8 +170,8 @@ Container execution and testing
 
 ![Java Run](5thfeb/6.png) 
 
-# 6th february
 
+# 6th february
 ![Java Run](6thfeb/1.png) 
 
 ![Java Run](6thfeb/2.png) 
@@ -182,6 +182,14 @@ Container execution and testing
 
 ![Java Run](6thfeb/5.png)
 
+## Assignment : using C programming 
+![Java Run](6thfeb/11.png) 
+
+![Java Run](6thfeb/12.png) 
+
+![Java Run](6thfeb/13.png) 
+
+![Java Run](6thfeb/14.png)
 
 
 
