@@ -48,5 +48,5 @@ Using custom HTML :
 ## Part 4: Image Size and layer Comparison
 ![ ](Screenshots/Exp3/4.png)
 
-## Part 5: Using HTML
+## Part 5: Using HTML and then cleanup
 ![ ](Screenshots/Exp3/5.png)
