@@ -28,7 +28,6 @@
 - Verified application output using browser and `curl`
 
   ![ ](Screenshots/Exp4/lab2-1.png)
-
   ![ ](Screenshots/Exp4/lab2-2.png)
 
 **Result:**  
@@ -54,8 +53,6 @@ Flask application successfully ran from a manually created Docker image.
 **Result:**  
 Flask application successfully containerized using Dockerfile.
 
----
-
 ### Comparison: Manual vs Dockerfile Approach
 
 **Manual Method**
@@ -72,3 +69,6 @@ Flask application successfully containerized using Dockerfile.
 - Dockerfile automates manual container steps
 - Port mapping is required to access container services
 - Dockerfile-based workflow is best for production and collaboration
+
+---
+## Part 2 :
