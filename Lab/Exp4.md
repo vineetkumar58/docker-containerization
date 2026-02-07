@@ -11,6 +11,9 @@
 - Added `requirements.txt` with Flask dependency
 - Verified application code structure (without running locally due to system package restrictions)
 
+  ![ ](Screenshots/Exp4/lab1.png)
+
+
 ### Lab 2: Run Flask App with Docker (Manual Method)
 
 - Pulled official Python base image (`python:3.9-slim`)
@@ -24,10 +27,13 @@
 - Ran a new container from the committed image
 - Verified application output using browser and `curl`
 
+  ![ ](Screenshots/Exp4/lab2-1.png)
+
+  ![ ](Screenshots/Exp4/lab2-2.png)
+
 **Result:**  
 Flask application successfully ran from a manually created Docker image.
 
----
 
 ## Lab 3: Flask App with Dockerfile (Automated Method)
 
@@ -41,6 +47,9 @@ Flask application successfully ran from a manually created Docker image.
 - Ran container from the built image
 - Verified application using `curl` and browser
 - Viewed container logs and managed container lifecycle
+
+![ ](Screenshots/Exp4/lab3-1.png)
+![ ](Screenshots/Exp4/lab3-2.png)
 
 **Result:**  
 Flask application successfully containerized using Dockerfile.
@@ -63,10 +72,3 @@ Flask application successfully containerized using Dockerfile.
 - Dockerfile automates manual container steps
 - Port mapping is required to access container services
 - Dockerfile-based workflow is best for production and collaboration
-
----
-
-## Cleanup
-
-- Stopped and removed running containers
-- Verified no active containers using `docker ps`
