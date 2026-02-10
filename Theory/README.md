@@ -220,7 +220,15 @@ previously we did using single stage , now using multi stage
 
 ![Java Run](10thfeb/9.png)
 
-Result: Image size reduced from ~150MB to ~1MB!
+![Java Run](10thfeb/10.png)
+
+![Java Run](10thfeb/11.png)
+
+#### comparing image size:
+
+![Java Run](10thfeb/12.png)
+
+### Result: Image size reduced from ~150MB to ~1MB!
 
 
 
