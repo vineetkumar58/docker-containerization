@@ -204,11 +204,14 @@ For C file:
 
 
 for JAVA file:
+
 ![Java Run](10thfeb/4.png)
 
 ![Java Run](10thfeb/5.png)
 
 ![Java Run](10thfeb/6.png)
+
+![Java Run](10thfeb/7.png)
 
 Result: Image size reduced from ~150MB to ~1MB!
 
