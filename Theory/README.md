@@ -194,7 +194,7 @@ Container execution and testing
 
 # 10th february
 previously we did using single stage , now using multi stage 
-For C file:
+### For C file:
 
 ![Java Run](10thfeb/1.png)
 
@@ -203,7 +203,8 @@ For C file:
 ![Java Run](10thfeb/3.png)
 
 
-for JAVA file:
+
+### for JAVA file(without multistage) :
 
 ![Java Run](10thfeb/4.png)
 
@@ -213,8 +214,13 @@ for JAVA file:
 
 ![Java Run](10thfeb/7.png)
 
-Result: Image size reduced from ~150MB to ~1MB!
+### for JAVA file(with multistage) :
 
+![Java Run](10thfeb/8.png)
+
+![Java Run](10thfeb/9.png)
+
+Result: Image size reduced from ~150MB to ~1MB!
 
 
 
