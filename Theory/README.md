@@ -193,8 +193,8 @@ Container execution and testing
 
 
 # 10th february
-previously we did using single stage , now using multi stage :
-for C file:
+previously we did using single stage , now using multi stage 
+For C file:
 
 ![Java Run](10thfeb/1.png)
 
