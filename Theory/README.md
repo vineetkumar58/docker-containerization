@@ -231,6 +231,12 @@ previously we did using single stage , now using multi stage
 ### Result: Image size reduced  to ~1MB!
 
 
+# 11th february
+
+![Java Run](11thfeb/persistantvolume.png)
+
+![Java Run](11thfeb/1.png)
+
 
 
 
