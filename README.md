@@ -17,8 +17,8 @@
 ### Experiment 2 :
 [Open Experiment 2](Lab/Exp2.md)
 
-### Experiment 3 :
+### Experiment 3-A :
 [Open Experiment 3](Lab/Exp3.md)
 
-### Experiment 4 :
+### Experiment 3-B :
 [Open Experiment 4](Lab/Exp4.md)
