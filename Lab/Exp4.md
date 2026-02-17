@@ -71,4 +71,3 @@ Flask application successfully containerized using Dockerfile.
 - Dockerfile-based workflow is best for production and collaboration
 
 ---
-## Part 2 :
