@@ -241,8 +241,19 @@ previously we did using single stage , now using multi stage
 # 12th february
 ![Java Run](12thfeb/1.jpeg)
 
+# 18th february
 
+## Docker Networking
+![Java Run](18thfeb/1.jpeg)
 
+![Java Run](18thfeb/2.jpeg)
 
+![Java Run](18thfeb/3.jpeg)
+
+![Java Run](18thfeb/4.jpeg)
+
+![Java Run](18thfeb/5.jpeg)
+
+![Java Run](18thfeb/6.jpeg)
 
 
