@@ -341,7 +341,7 @@ curl 192.168.1.100  # From host, may fail
 | Best for | Small deployments | Large-scale |
 
 ### Key Points:
-    Overlay = multi-host container communication
-    Uses Docker Swarm clustering
-    Provides automatic DNS name resolution
-    Can also be tested on single machine
+   Overlay = multi-host container communication
+   Uses Docker Swarm clustering
+   Provides automatic DNS name resolution
+   Can also be tested on single machine
