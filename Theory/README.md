@@ -256,15 +256,13 @@ previously we did using single stage , now using multi stage
 
 ![Java Run](18thfeb/6.jpeg)
 
+
 # 20th febraury
 # Docker Networking – Overlay Network (Swarm)
 
 ## What is Overlay Network
 Overlay network allows containers running on different Docker hosts to communicate as if they are on the same local network.
-
 Works using Docker Swarm.
-
----
 
 ## Prerequisites
 - Docker installed
@@ -274,11 +272,11 @@ Works using Docker Swarm.
   - 7946/tcp/udp → Node communication
   - 4789/udp → Overlay traffic
 
----
-
 ## Single Machine Lab (Learning Purpose)
 
 ### Step 1 — Initialize Swarm
+### Step 2 — Create Overlay Network
+### Step 3 — Run Containers
 ```bash
 docker swarm init --advertise-addr 127.0.0.1
 docker network create -d overlay --attachable my_overlay
@@ -288,5 +286,62 @@ docker run -d --network my_overlay --name app2 alpine sleep 3600
 
 docker exec app1 ping app2
 ```
-bash
 ![Java Run](20thfeb/1.jpeg)
+
+### Result: Containers communicate using container name (built-in DNS works)
+
+
+## Real Multi-Host Setup
+### MACVLAN LAB
+```bash
+# Shows join command for workers
+docker swarm join-token worker
+# Step 1: Find your network details
+# On Linux:
+ip route show default
+# Shows: default via 192.168.1.1 dev eth0
+# Interface: eth0, Gateway: 192.168.1.1
+
+# Step 2: Create MACVLAN network
+# -o parent=eth0 : Use your actual network interface
+docker network create -d macvlan \
+  --subnet=192.168.1.0/24 \
+  --gateway=192.168.1.1 \
+  -o parent=eth0 \
+  my_macvlan
+
+# Step 3: Run container with specific IP
+docker run -d \
+  --name web-macvlan \
+  --network my_macvlan \
+  --ip 192.168.1.100 \
+  nginx
+
+# Step 4: Test from ANOTHER computer on same network
+# Open browser to http://192.168.1.100
+# Should see nginx!
+
+# Step 5: Important - Host cannot reach container!
+# This won't work (expected behavior)
+curl 192.168.1.100  # From host, may fail
+```
+![Java Run](20thfeb/2.jpeg)
+
+
+### IPVLAN LAB
+![Java Run](20thfeb/3.jpeg)
+
+## IPVLAN vs MACVLAN
+
+| Feature | MACVLAN | IPVLAN |
+|--------|-------|------|
+| MAC addresses | One per container | One shared for all |
+| Network switch load | Higher (learns many MACs) | Lower (one MAC) |
+| Scalability | Limited by switch | Much higher |
+| Best for | Small deployments | Large-scale |
+
+### Key Points:
+    Overlay = multi-host container communication
+    Uses Docker Swarm clustering
+    Provides automatic DNS name resolution
+    Can also be tested on single machine
