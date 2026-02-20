@@ -256,4 +256,37 @@ previously we did using single stage , now using multi stage
 
 ![Java Run](18thfeb/6.jpeg)
 
+# 20th febraury
+# Docker Networking – Overlay Network (Swarm)
 
+## What is Overlay Network
+Overlay network allows containers running on different Docker hosts to communicate as if they are on the same local network.
+
+Works using Docker Swarm.
+
+---
+
+## Prerequisites
+- Docker installed
+- Swarm mode enabled
+- (Real multi-host) Open ports:
+  - 2377/tcp → Swarm management
+  - 7946/tcp/udp → Node communication
+  - 4789/udp → Overlay traffic
+
+---
+
+## Single Machine Lab (Learning Purpose)
+
+### Step 1 — Initialize Swarm
+```bash
+docker swarm init --advertise-addr 127.0.0.1
+docker network create -d overlay --attachable my_overlay
+
+docker run -d --network my_overlay --name app1 alpine sleep 3600
+docker run -d --network my_overlay --name app2 alpine sleep 3600
+
+docker exec app1 ping app2
+```
+bash
+![Java Run](20thfeb/1.jpeg)
