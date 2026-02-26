@@ -70,4 +70,33 @@ Flask application successfully containerized using Dockerfile.
 - Port mapping is required to access container services
 - Dockerfile-based workflow is best for production and collaboration
 
+## MultiStage Builds:
+
+ ### Why Multi-stage Builds?
+  - Smaller final image size
+  - Better security (remove build tools)
+  - Separate build and runtime environments
+
+-Multistage Dockerfile:
+  ![ ](Screenshots/Exp44/dockmul.png)
+
+working:
+![ ](Screenshots/Exp44/1.png)
+
+  
+
+## Node.js example:
+ - app.js :
+   ![ ](Screenshots/Exp44/A.png)
+
+ - package.json:
+   ![ ](Screenshots/Exp44/P.png)
+
+ - Dockerfile:
+   ![ ](Screenshots/Exp44/D.png)
+
+![ ](Screenshots/Exp44/2.png)
+
+![ ](Screenshots/Exp44/3.png)
+
 ---
