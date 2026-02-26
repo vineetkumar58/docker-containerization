@@ -83,6 +83,12 @@ working:
 
 ![ ](Screenshots/Exp44/1.png)
 
+
+## publishing to Docker Hub:
+![ ](Screenshots/Exp44/AA.png)
+![ ](Screenshots/Exp44/AB.png)
+
+
 ## Node.js example:
 app.js :
 
