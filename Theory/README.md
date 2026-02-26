@@ -346,5 +346,16 @@ curl 192.168.1.100  # From host, may fail
 - Provides automatic DNS name resolution
 - Can also be tested on single machine
 
-# 25th februaru
-
+# 25th february
+![Java Run](25thfeb/1.jpeg)
+![Java Run](25thfeb/2.jpeg)
+![Java Run](25thfeb/3.jpeg)
+![Java Run](25thfeb/4.jpeg)
+![Java Run](25thfeb/5.jpeg)
+![Java Run](25thfeb/6.jpeg)
+![Java Run](25thfeb/7.jpeg)
+![Java Run](25thfeb/8.jpeg)
+![Java Run](25thfeb/9.jpeg)
+![Java Run](25thfeb/10.jpeg)
+![Java Run](25thfeb/11.jpeg)
+![Java Run](25thfeb/12.jpeg)
