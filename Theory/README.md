@@ -358,4 +358,4 @@ curl 192.168.1.100  # From host, may fail
 ![Java Run](25thfeb/9.jpeg)
 ![Java Run](25thfeb/10.jpeg)
 ![Java Run](25thfeb/11.jpeg)
-![Java Run](25thfeb/12.jpeg)
+![Java Run](25thfeb/12.png)
