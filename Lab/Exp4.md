@@ -1,8 +1,6 @@
 # Experiment 4: Dockerfile for Web App Containerization
 
-## Part 1: Flask Application
-
-### Lab 1: Basic Flask Web App Structure
+### Basic Flask Web App Structure
 
 - Created a Flask project directory (`flask-lab`)
 - Added `app.py` with basic routes:
@@ -14,7 +12,7 @@
   ![ ](Screenshots/Exp4/lab1.png)
 
 
-### Lab 2: Run Flask App with Docker (Manual Method)
+### Run Flask App with Docker (Manual Method)
 
 - Pulled official Python base image (`python:3.9-slim`)
 - Started an interactive container using the Python image
@@ -34,7 +32,7 @@
 Flask application successfully ran from a manually created Docker image.
 
 
-## Lab 3: Flask App with Dockerfile (Automated Method)
+## Flask App with Dockerfile (Automated Method)
 
 - Created a Dockerfile to automate container setup
 - Used `python:3.9-slim` as base image
@@ -86,13 +84,13 @@ working:
   
 
 ## Node.js example:
- - app.js :
+  app.js :
    ![ ](Screenshots/Exp44/A.png)
 
- - package.json:
+  package.json:
    ![ ](Screenshots/Exp44/P.png)
 
- - Dockerfile:
+  Dockerfile:
    ![ ](Screenshots/Exp44/D.png)
 
 ![ ](Screenshots/Exp44/2.png)
