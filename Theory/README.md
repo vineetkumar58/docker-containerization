@@ -345,3 +345,6 @@ curl 192.168.1.100  # From host, may fail
 - Uses Docker Swarm clustering
 - Provides automatic DNS name resolution
 - Can also be tested on single machine
+
+# 25th februaru
+
