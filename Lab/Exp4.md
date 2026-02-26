@@ -76,19 +76,24 @@ Flask application successfully containerized using Dockerfile.
   - Separate build and runtime environments
 
 Multistage Dockerfile:
+
 ![ ](Screenshots/Exp44/dockmul.png)
 
 working:
+
 ![ ](Screenshots/Exp44/1.png)
 
 ## Node.js example:
 app.js :
+
 ![ ](Screenshots/Exp44/A.png)
 
 package.json:
+
 ![ ](Screenshots/Exp44/P.png)
 
 Dockerfile:
+
 ![ ](Screenshots/Exp44/D.png)
 
 ![ ](Screenshots/Exp44/2.png)
