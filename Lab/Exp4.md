@@ -77,7 +77,7 @@ Flask application successfully containerized using Dockerfile.
   - Better security (remove build tools)
   - Separate build and runtime environments
 
--Multistage Dockerfile:
+Multistage Dockerfile:
   ![ ](Screenshots/Exp44/dockmul.png)
 
 working:
