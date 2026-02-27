@@ -365,3 +365,25 @@ curl 192.168.1.100  # From host, may fail
 ![Java Run](26thfeb/2.png)
 ![Java Run](26thfeb/3.png)
 ![Java Run](26thfeb/4.png)
+
+
+# 27th februaury
+## Docker Swarm :
+### PART A — Create a Swarm
+Objective : Initialize cluster manager.
+
+![Java Run](27thfeb/1.png)
+
+### PART B — Add Nodes to Swarm
+Use Case
+Production setup:
+1.Manager
+2.Worker nodes
+
+![Java Run](27thfeb/2.png)
+
+### PART C — Deploy a Service
+Use Case
+Deploy web server with 3 replicas.
+
+![Java Run](27thfeb/3.png)
