@@ -369,6 +369,19 @@ curl 192.168.1.100  # From host, may fail
 
 # 27th februaury
 ## Docker Swarm :
+
+### why we need docker swarm :
+Docker swarm provides all these :
+
+| Requirement          | Example Scenario                              |
+|----------------------|----------------------------------------------|
+| High availability    | Web app must not go down                    |
+| Auto healing         | If container crashes → restart automatically |
+| Horizontal scaling   | Increase instances during high traffic      |
+| Rolling updates      | Update app without downtime                 |
+| Load balancing       | Distribute traffic across replicas          |
+| Multi-node cluster   | Use multiple physical/VM servers            |
+
 ### PART A — Create a Swarm
 Objective : Initialize cluster manager.
 
