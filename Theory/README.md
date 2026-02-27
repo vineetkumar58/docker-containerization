@@ -400,3 +400,33 @@ Use Case
 Deploy web server with 3 replicas.
 
 ![Java Run](27thfeb/3.png)
+
+### PART D — Inspect the Service
+Use Case
+Check configuration & runtime details.
+
+![Java Run](27thfeb/3.png)
+
+### PART E — Scale the Service
+Use Case
+Traffic increased during sale → need 6 replicas.
+
+![Java Run](27thfeb/4.png)
+
+### PART F — Delete the Service
+Use Case
+Application no longer required.
+
+![Java Run](27thfeb/5.png)
+
+### PART G — Apply Rolling Updates
+Use Case
+Deploy new version without downtime.
+
+![Java Run](27thfeb/6.png)
+
+PART G — Apply Rolling Updates
+Use Case
+Deploy new version without downtime.
+
+![Java Run](27thfeb/7.png)
