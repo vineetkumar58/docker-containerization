@@ -1,4 +1,4 @@
-<img width="1470" height="243" alt="image" src="https://github.com/user-attachments/assets/5a30d02e-c4ee-41a5-a3a7-b529c0f4c9d9" /># Experiment-5: Docker - Volumes, Environment Variables, Monitoring & Networks
+# Experiment-5: Docker - Volumes, Environment Variables, Monitoring & Networks
 
 ## PART 1 – DOCKER VOLUMES
 ### LAB 1 – Data is Ephemeral
