@@ -20,4 +20,4 @@
 
 #### 2.Named Volume
 - What Happens?
-- Docker maps:```bash mydata → /var/lib/docker/volumes/mydata ```
+- Docker maps: bash``` mydata → /var/lib/docker/volumes/mydata ```
