@@ -211,3 +211,136 @@ yml file :
     - Uses ```depends_on```
 1. Bring up services using one command.
 2. Stop and remove everything properly.
+
+-yml file :
+![ ](Screenshots/Exp6/9.png)
+
+![ ](Screenshots/Exp6/10.png)
+
+
+### Task 4: Resource Limits Conversion
+- Given Docker Run Command:
+```docker run -d \
+     --name limited-app \
+     -p 9000:9000 \
+     --memory="256m" \
+     --cpus="0.5" \
+     --restart always \
+     nginx:alpine
+```
+- Student Task:
+  - Convert this to Docker Compose.
+  - Add resource limits using:
+      ```
+     deploy:
+      resources:
+        limits:
+      ```
+      
+- DOCKER COMPOSE CONVERSION :
+![ ](Screenshots/Exp6/11.png)
+
+![ ](Screenshots/Exp6/12.png)
+
+- Explain:
+  - When deploy works
+     - deploy: works only in Docker Swarm mode.
+     - ```
+       docker swarm init
+       docker stack deploy -c docker-compose.yml mystack
+       ```
+  - Difference between normal Compose mode and Swarm mode
+    - Normal Docker Compose
+       - Uses docker compose up
+       - Runs on single host
+       - Ignores deploy section
+       - Good for development
+    - Docker Swarm Mode
+       - Uses docker stack deploy
+       - Supports clustering (multiple nodes)
+       - deploy.resources.limits works
+       - Used in production environments
+
+- Dockerfile:
+![ ](Screenshots/Exp6/13.png)
+
+- yml file:
+![ ](Screenshots/Exp6/14.png)
+
+- app.js:
+![ ](Screenshots/Exp6/15.png)
+
+- package.json:
+![ ](Screenshots/Exp6/16.png)
+
+- Build and Run :
+![ ](Screenshots/Exp6/17.png)
+
+
+### Task 5: Replace Standard Image with Dockerfile (Node App)
+#### Scenario
+You are given:
+```bash
+docker run -d -p 3000:3000 node:18-alpine
+```
+- Instead of directly using `node:18-alpine`, you must:
+ - Create a simple Node.js application
+ - Write a custom Dockerfile
+ - Use Docker Compose with the `build:` option
+
+- Dockerfile:
+![ ](Screenshots/Exp6/18.png)
+
+- yml file:
+![ ](Screenshots/Exp6/19.png)
+
+- app.js:
+![ ](Screenshots/Exp6/20.png)
+
+- Build and Run:
+![ ](Screenshots/Exp6/21.png)
+
+-CHANGE IN app.js :
+![ ](Screenshots/Exp6/22.png)
+
+- Again Build and Run :
+![ ](Screenshots/Exp6/23.png)
+
+- Explain difference between Image and Build :
+| Feature | `image:` | `build:` |
+|----------|----------|----------|
+| Source | Pulls prebuilt image from Docker Hub | Builds image from your Dockerfile |
+| Customization | No customization | Full customization (app + dependencies) |
+| Startup Speed | Faster (just pulls image) | Slightly slower (needs build process) |
+| Use Case | Simple / testing use | Real-world projects |
+| Example | `image: node:18-alpine` | `build: .` |
+
+
+### Advanced Build Challenge
+### Task 6: Multi-Stage Dockerfile with Compose
+ - Requirement:
+   - Create a simple Python FastAPI or Node production-ready app using:
+      - Multi-stage Dockerfile
+      - Smaller final image
+      - Use Compose to build it
+ - Must:
+   - Write multi-stage Dockerfile
+   - Use build: in Compose
+   - Add environment variables
+   - Add volume mount for development mode
+   - Compare image size: `docker images`
+
+- Multi-staged Dockerfile:
+![ ](Screenshots/Exp6/24.png)
+
+- yml file:
+![ ](Screenshots/Exp6/25.png)
+
+- app.js:
+![ ](Screenshots/Exp6/26.png)
+
+- package.json:
+![ ](Screenshots/Exp6/27.png)
+
+- Build and Run :
+![ ](Screenshots/Exp6/28.png)
