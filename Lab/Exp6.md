@@ -131,7 +131,7 @@ Understanding both approaches helps in selecting the right tool depending on app
  
 #### B : Run Same Setup Using Docker Compose
 - yml file:
-- 
+  
 ![ ](Screenshots/Exp6/3.png)
 
 ![ ](Screenshots/Exp6/2.png)
@@ -242,6 +242,7 @@ yml file :
       ```
       
 - DOCKER COMPOSE CONVERSION :
+  
 ![ ](Screenshots/Exp6/11.png)
 
 ![ ](Screenshots/Exp6/12.png)
@@ -321,14 +322,15 @@ docker run -d -p 3000:3000 node:18-alpine
   
 ![ ](Screenshots/Exp6/23.png)
 
-- Explain difference between Image and Build :
-| Feature | `image:` | `build:` |
-|----------|----------|----------|
-| Source | Pulls prebuilt image from Docker Hub | Builds image from your Dockerfile |
-| Customization | No customization | Full customization (app + dependencies) |
-| Startup Speed | Faster (just pulls image) | Slightly slower (needs build process) |
-| Use Case | Simple / testing use | Real-world projects |
-| Example | `image: node:18-alpine` | `build: .` |
+- Difference Between `image:` and `build:`
+
+| Feature        | `image:`                          | `build:`                                  |
+|---------------|-----------------------------------|--------------------------------------------|
+| Source        | Pulls prebuilt image from Docker Hub | Builds image from your Dockerfile         |
+| Customization | No customization                  | Full customization (app + dependencies)    |
+| Startup Speed | Faster (just pulls image)         | Slightly slower (needs build process)      |
+| Use Case      | Simple / testing use              | Real-world projects                        |
+| Example       | `image: node:18-alpine`           | `build: .`                                 |
 
 
 ### Advanced Build Challenge
