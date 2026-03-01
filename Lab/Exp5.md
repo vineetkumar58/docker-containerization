@@ -75,8 +75,7 @@
 
 ## PART 3 – MONITORING
 
-#### 1. 
-``` Docker stats ```
+#### 1. Docker stats 
 - Shows:
   - CPU %
   - Memory usage
@@ -85,36 +84,34 @@
 
 ![ ](Screenshots/Exp5/9.png)
 
-``` docker stats container1 container2```
+- docker stats container1 container2
 ![ ](Screenshots/Exp5/app1app2.png)
 
-``` docker stats --no-stream```
+- docker stats --no-stream
 ![ ](Screenshots/Exp5/nostr.png)
 
-``` docker stats --all```
+- docker stats --all
 ![ ](Screenshots/Exp5/statsall.png)
 
-#### 2. 
-``` docker top container-name ```
+#### 2. docker top container-name 
 - Shows running processes inside container.
 
 ![ ](Screenshots/Exp5/10.png)
 
-#### 3.
+#### 3. Logs
 ```docker logs container-name```
 ```docker logs -f container-name```
     
 ![ ](Screenshots/Exp5/11.png)
 
-#### 4.
+#### 4.Inspect
 ```docker inspect container-name```
 
 ![ ](Screenshots/Exp5/12.png)
 ![ ](Screenshots/Exp5/13.png)
 
 ## PART 4 – NETWORKS
-#### 1.
-```docker network ls```
+#### 1. docker network ls
 ![ ](Screenshots/Exp5/14.png)
 
 #### Custom Bridge Network :
