@@ -121,3 +121,15 @@ Docker Run = Imperative, manual, step-by-step approach
 Docker Compose = Declarative, structured, reusable, and scalable approach  
 
 Understanding both approaches helps in selecting the right tool depending on application complexity and deployment requirements.
+
+## Part - B : PRACTICLE:
+### Task 1: Single Container Comparison
+#### Step 1: Run Nginx Using Docker Run
+
+#### Step 2: Run Same Setup Using Docker Compose
+
+### Task 2: Multi-Container Application
+- Objective:
+- Deploy WordPress with MySQL using:
+   - Docker Run (manual way)
+   - Docker Compose (structured way)
