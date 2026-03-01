@@ -1,4 +1,4 @@
-<img width="1912" height="312" alt="image" src="https://github.com/user-attachments/assets/dfa492a2-bcfe-4fd5-af3d-d27fae587121" /># Experiment 6 : Comparison of Docker Run and Docker Compose
+# Experiment 6 : Comparison of Docker Run and Docker Compose
 
 ## PART A – THEORY
 
@@ -154,6 +154,7 @@ Understanding both approaches helps in selecting the right tool depending on app
 ## PART - C :
 
 ### Task 3: Convert Docker Run to Docker Compose
+
 ### Problem 1: Basic Web Application
 - Given Docker Run Command:
  ```
@@ -166,9 +167,47 @@ Understanding both approaches helps in selecting the right tool depending on app
     node:18-alpine
  ```
 - Student Task:
-- Write an equivalent docker-compose.yml
-- Ensure:
-   - Same container name
-   - Same port mapping
-   - Same environment variables
-   - Same restart policy
+ - Write an equivalent docker-compose.yml
+   - Ensure:
+    - Same container name
+    - Same port mapping
+    -  Same environment variables
+    - Same restart policy
+
+yml file :
+![ ](Screenshots/Exp6/7.png)
+
+![ ](Screenshots/Exp6/8.png)
+
+### Problem 2: Volume + Network Configuration
+- Given Docker Run Commands:
+```
+   docker network create app-net
+```
+```
+  docker run -d \
+     --name postgres-db \
+     --network app-net \
+     -e POSTGRES_USER=admin \
+     -e POSTGRES_PASSWORD=secret \
+     -v pgdata:/var/lib/postgresql/data \
+     postgres:15
+```
+```
+  docker run -d \
+     --name backend \
+     --network app-net \
+     -p 8000:8000 \
+     -e DB_HOST=postgres-db \
+     -e DB_USER=admin \
+     -e DB_PASS=secret \
+     python:3.11-slim
+```
+- Student Task:
+  - Create a single ```docker-compose.yml``` file that:
+    - Defines both services
+    - Creates named volume ```pgdata```
+    - Creates custom network ```app-net```
+    - Uses ```depends_on```
+1. Bring up services using one command.
+2. Stop and remove everything properly.
