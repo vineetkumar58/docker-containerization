@@ -1,4 +1,4 @@
-# Experiment 6 : Comparison of Docker Run and Docker Compose
+<img width="1912" height="312" alt="image" src="https://github.com/user-attachments/assets/dfa492a2-bcfe-4fd5-af3d-d27fae587121" /># Experiment 6 : Comparison of Docker Run and Docker Compose
 
 ## PART A – THEORY
 
@@ -122,14 +122,53 @@ Docker Compose = Declarative, structured, reusable, and scalable approach
 
 Understanding both approaches helps in selecting the right tool depending on application complexity and deployment requirements.
 
-## Part - B : PRACTICLE:
-### Task 1: Single Container Comparison
-#### Step 1: Run Nginx Using Docker Run
 
-#### Step 2: Run Same Setup Using Docker Compose
+## Part - B : PRACTICLE:
+
+### Task 1: Single Container Comparison
+#### A : Run Nginx Using Docker Run
+![ ](Screenshots/Exp6/1.png)
+ 
+#### B : Run Same Setup Using Docker Compose
+- yml file:
+![ ](Screenshots/Exp6/3.png)
+
+![ ](Screenshots/Exp6/2.png)
+
 
 ### Task 2: Multi-Container Application
 - Objective:
 - Deploy WordPress with MySQL using:
    - Docker Run (manual way)
    - Docker Compose (structured way)
+#### A : Using Docker Run
+![ ](Screenshots/Exp6/4-1.png)
+![ ](Screenshots/Exp6/4-2.png)
+
+#### B : Using Docker Compose
+-yml file:
+![ ](Screenshots/Exp6/5.png)
+
+![ ](Screenshots/Exp6/6.png)
+
+## PART - C :
+
+### Task 3: Convert Docker Run to Docker Compose
+### Problem 1: Basic Web Application
+- Given Docker Run Command:
+ ```
+    docker run -d \
+    --name webapp \
+    -p 5000:5000 \
+    -e APP_ENV=production \
+    -e DEBUG=false \
+    --restart unless-stopped \
+    node:18-alpine
+ ```
+- Student Task:
+- Write an equivalent docker-compose.yml
+- Ensure:
+   - Same container name
+   - Same port mapping
+   - Same environment variables
+   - Same restart policy
