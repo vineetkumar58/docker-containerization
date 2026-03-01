@@ -131,6 +131,7 @@ Understanding both approaches helps in selecting the right tool depending on app
  
 #### B : Run Same Setup Using Docker Compose
 - yml file:
+- 
 ![ ](Screenshots/Exp6/3.png)
 
 ![ ](Screenshots/Exp6/2.png)
@@ -147,6 +148,7 @@ Understanding both approaches helps in selecting the right tool depending on app
 
 #### B : Using Docker Compose
 -yml file:
+
 ![ ](Screenshots/Exp6/5.png)
 
 ![ ](Screenshots/Exp6/6.png)
@@ -175,6 +177,7 @@ Understanding both approaches helps in selecting the right tool depending on app
     - Same restart policy
 
 yml file :
+
 ![ ](Screenshots/Exp6/7.png)
 
 ![ ](Screenshots/Exp6/8.png)
@@ -213,6 +216,7 @@ yml file :
 2. Stop and remove everything properly.
 
 -yml file :
+
 ![ ](Screenshots/Exp6/9.png)
 
 ![ ](Screenshots/Exp6/10.png)
@@ -262,18 +266,23 @@ yml file :
        - Used in production environments
 
 - Dockerfile:
+  
 ![ ](Screenshots/Exp6/13.png)
 
 - yml file:
+  
 ![ ](Screenshots/Exp6/14.png)
 
 - app.js:
+  
 ![ ](Screenshots/Exp6/15.png)
 
 - package.json:
+  
 ![ ](Screenshots/Exp6/16.png)
 
 - Build and Run :
+  
 ![ ](Screenshots/Exp6/17.png)
 
 
@@ -289,21 +298,27 @@ docker run -d -p 3000:3000 node:18-alpine
  - Use Docker Compose with the `build:` option
 
 - Dockerfile:
+  
 ![ ](Screenshots/Exp6/18.png)
 
 - yml file:
+  
 ![ ](Screenshots/Exp6/19.png)
 
 - app.js:
+  
 ![ ](Screenshots/Exp6/20.png)
 
 - Build and Run:
+  
 ![ ](Screenshots/Exp6/21.png)
 
--CHANGE IN app.js :
+- CHANGE IN app.js :
+
 ![ ](Screenshots/Exp6/22.png)
 
 - Again Build and Run :
+  
 ![ ](Screenshots/Exp6/23.png)
 
 - Explain difference between Image and Build :
@@ -331,16 +346,21 @@ docker run -d -p 3000:3000 node:18-alpine
    - Compare image size: `docker images`
 
 - Multi-staged Dockerfile:
+  
 ![ ](Screenshots/Exp6/24.png)
 
 - yml file:
+  
 ![ ](Screenshots/Exp6/25.png)
 
 - app.js:
+  
 ![ ](Screenshots/Exp6/26.png)
 
 - package.json:
+  
 ![ ](Screenshots/Exp6/27.png)
 
 - Build and Run :
+  
 ![ ](Screenshots/Exp6/28.png)
