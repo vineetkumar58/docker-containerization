@@ -28,3 +28,6 @@
 
 ### Experiment 6 :
 [Open Experiment 6](Lab/Exp6.md)
+
+## PROJECT ASSIGNMENT 1 
+[Open Assignment 1 ](Assignment1/README.md)
