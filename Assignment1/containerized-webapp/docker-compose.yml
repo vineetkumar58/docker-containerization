@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+
+  database:
+    build: ./database
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      mymacvlan:
+        ipv4_address: 192.168.50.20
+
+  backend:
+    build: ./backend
+    container_name: fastapi_backend
+    restart: always
+    environment:
+      DB_HOST: 192.168.50.20
+      POSTGRES_DB: mydb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+    depends_on:
+      - database
+    networks:
+      mymacvlan:
+        ipv4_address: 192.168.50.10
+
+networks:
+  mymacvlan:
+    external: true
+
+volumes:
+  pgdata:
