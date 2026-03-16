@@ -60,3 +60,5 @@ The report must include:
 - Network design diagram
 - Image size comparison
 - **Macvlan vs Ipvlan comparison**
+
+## REPORT: [ click to see report ](vineetkumar_500124147_assignment1)
