@@ -430,3 +430,12 @@ Use Case
 Deploy new version without downtime.
 
 ![Java Run](27thfeb/7.png)
+
+# 18th march ( kubernetes )
+
+![Java Run](18thmar/1.png)
+
+![Java Run](18thmar/2.png)
+
+![Java Run](18thmar/3.png)
+
