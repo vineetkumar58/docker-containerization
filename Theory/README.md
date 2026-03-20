@@ -439,3 +439,13 @@ Deploy new version without downtime.
 
 ![Java Run](18thmar/3.png)
 
+# 20th march 
+## KUBERNETES
+![Java Run](20mar/1.png)
+
+## PORTAINER
+![Java Run](20mar/2.png)
+
+![Java Run](20mar/3.png)
+
+![Java Run](20mar/4.png)
