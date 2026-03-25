@@ -9,7 +9,7 @@
 ## Task: Deploy a Simple Web Application (Apache httpd)
    - You will run an Apache server instead of nginx.
 
-![Docker Image](./taskk8sscreenshots/1.png)
+![Docker Image](../taskk8sscreenshots/1.png)
 ![Docker Image](taskk8sscreenshots/2.png)
 ![Docker Image](taskk8sscreenshots/3.png)
 ![Docker Image](taskk8sscreenshots/4.png)
