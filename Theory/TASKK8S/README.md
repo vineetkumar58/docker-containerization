@@ -1,5 +1,5 @@
 # Hands-on Task: Run and Manage a “Hello Web App” (httpd)
-# Objective
+# Objective:
 # Deploy and manage a simple Apache-based web server and:
    - verify it is running
    - modify it
