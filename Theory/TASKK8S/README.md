@@ -26,7 +26,7 @@
 
 ### Step 3: Access the App
 - Open:
-  - http://localhost:8081
+  - "http://localhost:8081"
 - You should see: → Apache default page (“It works!”)
   
 ![Docker Image](../taskk8sscreenshots/4.png)
