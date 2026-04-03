@@ -45,19 +45,19 @@
 
 ### Lab 4: Volume Management Commands
 - List all volumes
-  docker volume ls
+- docker volume ls
 
 - Create a volume
-  docker volume create app-volume
+-  docker volume create app-volume
 
 - Inspect volume details
-  docker volume inspect app-volume
+- docker volume inspect app-volume
 
 - Remove unused volumes
-  docker volume prune
+- docker volume prune
 
 - Remove specific volume
-  docker volume rm volume-name
+- docker volume rm volume-name
   
 ![ ](Screenshots/Exp5/a.png)
 
@@ -92,6 +92,7 @@
 
 ## PART 3 – MONITORING
 
+### Lab 1: Basic Monitoring Commands
 #### 1. Docker stats 
 - Shows:
   - CPU %
@@ -110,23 +111,43 @@
 - docker stats --all
 ![ ](Screenshots/Exp5/statsall.png)
 
+### Lab 2:
 #### 2. docker top container-name 
 - Shows running processes inside container.
 
 ![ ](Screenshots/Exp5/10.png)
 
+### Lab 3:
 #### 3. Logs
 ```docker logs container-name```
 ```docker logs -f container-name```
+```docker logs --tail 100 container-name```
+```docker logs -t container-name```
+```docker logs --since 2024-01-15 container-name```
+```docker logs -f --tail 5 -t container-name```
     
 ![ ](Screenshots/Exp5/11.png)
 
+![ ](Screenshots/Exp5/b.png)
+
+![ ](Screenshots/Exp5/c.png)
+
+![ ](Screenshots/Exp5/d.png)
+
+###Lab 4:
 #### 4.Inspect
 ```docker inspect container-name```
 
 ![ ](Screenshots/Exp5/12.png)
 ![ ](Screenshots/Exp5/13.png)
+![ ](Screenshots/Exp5/e.png)
 
+### Practical Monitoring Script
+
+![ ](Screenshots/Exp5/f.png)
+![ ](Screenshots/Exp5/g.png)
+
+###
 ## PART 4 – NETWORKS
 #### 1. docker network ls
 ![ ](Screenshots/Exp5/14.png)
@@ -154,3 +175,18 @@
 
 #### Port Mapping
 ![ ](Screenshots/Exp5/port.png)
+
+## Part 5: Complete Real-World Example
+### Application Architecture:
+ - Flask Web App (port 5000)
+ - PostgreSQL Database (port 5432)
+ - Redis Cache (port 6379)
+ - All connected via custom network
+
+![ ](Screenshots/Exp5/h.png)
+![ ](Screenshots/Exp5/i.png)
+![ ](Screenshots/Exp5/k.png)
+![ ](Screenshots/Exp5/j.png)
+![ ](Screenshots/Exp5/m.png)
+![ ](Screenshots/Exp5/l.png)
+
