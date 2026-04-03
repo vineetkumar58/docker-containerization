@@ -43,6 +43,23 @@
 -EXAMPLE 2 : WITH CONFIGURATION FILES:
 ![ ](Screenshots/Exp5/18.png)
 
+### Lab 4: Volume Management Commands
+- List all volumes
+  docker volume ls
+
+- Create a volume
+  docker volume create app-volume
+
+- Inspect volume details
+  docker volume inspect app-volume
+
+- Remove unused volumes
+  docker volume prune
+
+- Remove specific volume
+  docker volume rm volume-name
+  
+![ ](Screenshots/Exp5/a.png)
 
 ## PART 2 – ENVIRONMENT VARIABLES
 
