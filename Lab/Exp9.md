@@ -13,19 +13,20 @@ Ansible is an open-source automation tool used for configuration management, app
 * **Managed Nodes:** Target systems (Docker containers).
 * **Inventory:** A list or group of managed nodes.
 * **Playbook:** A YAML file defining the desired state or tasks.
-* **Modules:** Built-in tools used by Ansible (e.g., `apt`, `copy`, `service`).
+* **Modules:** Built-in tools like apt, copy, and service.
 
 ### Why Ansible?
-* **Agentless:** No software needs to be installed on target nodes.
-* **Consistency:** Ensures all servers are in the same state.
-* **Scalability:** Can manage thousands of servers as easily as one.
+* Reduces manual work
+* Ensures consistency
+* Saves time
+* Scales easily
 
 ---
 
 ## Tools Used
-* **Ansible** (Automation engine)
-* **Docker** (Containerization platform)
-* **Ubuntu** (WSL/Linux Environment)
+* **Ansible**
+* **Docker**
+* **Ubuntu (WSL/Linux)**
 
 ---
 
