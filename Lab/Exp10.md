@@ -239,13 +239,6 @@ Before starting the lab, make sure you have the following installed:
 
 We use Docker Compose to start both the SonarQube server and its PostgreSQL database together.
 
-### Create the project folder
-
-```bash
-mkdir sonar-lab
-cd sonar-lab
-```
-
 ### Create `docker-compose.yml`
 
 ```yaml
@@ -265,11 +258,8 @@ services:
       POSTGRES_USER: sonar
       POSTGRES_PASSWORD: sonar
       POSTGRES_DB: sonarqube
-      POSTGRES_HOST_AUTH_METHOD: trust
     volumes:
       - sonar-db-data:/var/lib/postgresql/data
-    networks:
-      - sonarqube-lab
 
   sonarqube:
     image: sonarqube:lts-community
@@ -280,37 +270,33 @@ services:
       SONAR_JDBC_URL: jdbc:postgresql://sonar-db:5432/sonarqube
       SONAR_JDBC_USERNAME: sonar
       SONAR_JDBC_PASSWORD: sonar
-    volumes:
-      - sonar-data:/opt/sonarqube/data
-      - sonar-extensions:/opt/sonarqube/extensions
     depends_on:
       - sonar-db
-    networks:
-      - sonarqube-lab
 
 volumes:
   sonar-db-data:
-  sonar-data:
-  sonar-extensions:
-
-networks:
-  sonarqube-lab:
-    driver: bridge
 ```
+
+![ ](Screenshots/Exp10/6.png)
+
 
 ### Start both containers
 
 ```bash
 docker-compose up -d
 ```
+![ ](Screenshots/Exp10/7.png)
+
 
 ### Watch the logs until you see "SonarQube is up"
 
 ```bash
 docker-compose logs -f sonarqube
 ```
+![ ](Screenshots/Exp10/8.png)
 
 > **Note:** This can take 2–3 minutes. Wait for the message `SonarQube is up` before proceeding.
+
 
 ### Access the Web UI
 
@@ -318,6 +304,10 @@ Open your browser at: **http://localhost:9000**
 
 - Default login: `admin` / `admin`
 - You will be prompted to change the password on first login.
+
+![ ](Screenshots/Exp10/8-1.png)
+
+![ ](Screenshots/Exp10/8-2.png)
 
 ---
 
@@ -339,63 +329,27 @@ package com.example;
 
 public class Calculator {
 
-    // BUG: Division by zero is not handled
-    // If someone calls divide(5, 0), this will crash at runtime.
     public int divide(int a, int b) {
         return a / b;
     }
 
-    // CODE SMELL: Unused variable
-    // The variable 'unused' is declared but never used.
     public int add(int a, int b) {
         int result = a + b;
-        int unused = 100;   // ← code smell: delete this line
+        int unused = 100;
         return result;
     }
 
-    // VULNERABILITY: SQL Injection risk
-    // Building a query by concatenating user input is dangerous.
-    // An attacker could pass: "1 OR 1=1" and get all users.
     public String getUser(String userId) {
         String query = "SELECT * FROM users WHERE id = " + userId;
         return query;
     }
 
-    // CODE SMELL: Duplicated code
-    // These two methods do exactly the same thing.
-    public int multiply(int a, int b) {
-        int result = 0;
-        for (int i = 0; i < b; i++) {
-            result = result + a;
-        }
-        return result;
-    }
-
-    public int multiplyAlt(int a, int b) {
-        int result = 0;
-        for (int i = 0; i < b; i++) {
-            result = result + a;   // ← exact duplicate of multiply()
-        }
-        return result;
-    }
-
-    // BUG: Null pointer risk
-    // If 'name' is null, calling .toUpperCase() will throw NullPointerException.
     public String getName(String name) {
         return name.toUpperCase();
     }
-
-    // CODE SMELL: Empty catch block
-    // The exception is caught but silently ignored.
-    public void riskyOperation() {
-        try {
-            int x = 10 / 0;
-        } catch (Exception e) {
-            // ← never leave catch blocks empty
-        }
-    }
 }
 ```
+![ ](Screenshots/Exp10/9.png)
 
 ### Intentional issues summary
 
@@ -413,47 +367,34 @@ public class Calculator {
 Place this in the `sample-java-app` root folder:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0">
 
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.example</groupId>
-    <artifactId>sample-app</artifactId>
-    <version>1.0-SNAPSHOT</version>
+<modelVersion>4.0.0</modelVersion>
 
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <sonar.projectKey>sample-java-app</sonar.projectKey>
-        <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <!-- Replace with your actual token after Step 3 -->
-        <sonar.login>YOUR_TOKEN_HERE</sonar.login>
-    </properties>
+<groupId>com.example</groupId>
+<artifactId>sample-app</artifactId>
+<version>1.0</version>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+<properties>
+<maven.compiler.source>11</maven.compiler.source>
+<maven.compiler.target>11</maven.compiler.target>
+<sonar.projectKey>sample-java-app</sonar.projectKey>
+<sonar.host.url>http://localhost:9000</sonar.host.url>
+</properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.9.1.2184</version>
-            </plugin>
-        </plugins>
-    </build>
+<build>
+<plugins>
+<plugin>
+<groupId>org.sonarsource.scanner.maven</groupId>
+<artifactId>sonar-maven-plugin</artifactId>
+<version>3.9.1.2184</version>
+</plugin>
+</plugins>
+</build>
 
 </project>
 ```
+![ ](Screenshots/Exp10/10.png)
 
 ---
 
@@ -486,6 +427,8 @@ Open `pom.xml` and replace `YOUR_TOKEN_HERE`:
 <sonar.login>sqp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</sonar.login>
 ```
 
+![ ](Screenshots/Exp10/11.png)
+
 ---
 
 ## 12. Step 4 — Run the Scanner
@@ -503,6 +446,12 @@ mvn sonar:sonar -Dsonar.login=YOUR_TOKEN
 ```
 
 Maven will compile the code, then the sonar plugin will send the analysis report to the server.
+
+![ ](Screenshots/Exp10/12.png)
+
+![ ](Screenshots/Exp10/13.png)
+
+![ ](Screenshots/Exp10/14.png)
 
 ---
 
