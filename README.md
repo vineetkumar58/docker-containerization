@@ -37,5 +37,8 @@
 ### Experiment 9 :
 [Open Experiment 9](Lab/Exp9.md)
 
+### Experiment 10 :
+[Open Experiment 10](Lab/Exp10.md)
+
 ## PROJECT ASSIGNMENT 1 
 [Open Assignment 1 ](Assignment1/README.md)
