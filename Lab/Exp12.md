@@ -1,5 +1,4 @@
-<img width="1291" height="216" alt="image" src="https://github.com/user-attachments/assets/5b3636bf-8cbd-46cb-9062-825f3f72e6eb" /><img width="1011" height="329" alt="image" src="https://github.com/user-attachments/assets/3a349d3b-7e36-4b79-b347-b2ba8acc2ca1" /># Experiment 12: Container Orchestration using Kubernetes
-
+# Experiment 12: Container Orchestration using Kubernetes
 ---
 
 ## Objective
