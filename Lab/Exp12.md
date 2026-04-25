@@ -1,4 +1,4 @@
-# Experiment 12: Container Orchestration using Kubernetes
+<img width="1291" height="216" alt="image" src="https://github.com/user-attachments/assets/5b3636bf-8cbd-46cb-9062-825f3f72e6eb" /><img width="1011" height="329" alt="image" src="https://github.com/user-attachments/assets/3a349d3b-7e36-4b79-b347-b2ba8acc2ca1" /># Experiment 12: Container Orchestration using Kubernetes
 
 ---
 
@@ -43,7 +43,7 @@ kubectl get nodes
 NAME             STATUS   ROLES           AGE   VERSION
 docker-desktop   Ready    control-plane   30d   v1.34.1
 ```
-
+![ ](Screenshots/Exp12/11.png)
 
 ---
 
@@ -72,6 +72,7 @@ spec:
         ports:
         - containerPort: 80
 ```
+![ ](Screenshots/Exp12/12.png)
 
 ### Apply and verify
 
@@ -81,7 +82,6 @@ kubectl apply -f wordpress-deployment.yaml
 ```
 deployment.apps/wordpress created
 ```
-
 ```bash
 kubectl get pods
 ```
@@ -90,8 +90,9 @@ NAME                         READY   STATUS    RESTARTS   AGE
 wordpress-848c87c44f-h5542   1/1     Running   0          25s
 wordpress-848c87c44f-n9kps   1/1     Running   0          25s
 ```
-
 Both pods are `Running` with `READY 1/1`.
+
+![ ](Screenshots/Exp12/13.png)
 
 ---
 
@@ -113,6 +114,7 @@ spec:
       targetPort: 80
       nodePort: 30007
 ```
+![ ](Screenshots/Exp12/14.png)
 
 ### Apply and verify
 
@@ -122,7 +124,6 @@ kubectl apply -f wordpress-service.yaml
 ```
 service/wordpress-service created
 ```
-
 ```bash
 kubectl get svc
 ```
@@ -131,6 +132,7 @@ NAME                TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
 kubernetes          ClusterIP   10.96.0.1       <none>        443/TCP        31d
 wordpress-service   NodePort    10.99.82.207    <none>        80:30007/TCP   13s
 ```
+![ ](Screenshots/Exp12/15.png)
 
 ---
 
@@ -144,13 +146,19 @@ NAME                         READY   STATUS    RESTARTS   AGE
 wordpress-848c87c44f-h5542   1/1     Running   0          6m37s
 wordpress-848c87c44f-n9kps   1/1     Running   0          6m37s
 ```
+![ ](Screenshots/Exp12/16.png)
 
 Access WordPress in browser:
 ```
 http://localhost:30007
 ```
-
 Both pods are healthy. The Service routes external traffic on port `30007` to the pods internally on port `80`.
+
+![ ](Screenshots/Exp12/1.png)
+
+![ ](Screenshots/Exp12/2.png)
+
+![ ](Screenshots/Exp12/3.png)
 
 ---
 
@@ -173,8 +181,9 @@ wordpress-848c87c44f-frtlt   1/1     Running             0          6s
 wordpress-848c87c44f-h5542   1/1     Running             0          6m56s
 wordpress-848c87c44f-n9kps   1/1     Running             0          6m56s
 ```
-
 2 new pods were created instantly. Within seconds all 4 showed `Running`.
+
+![ ](Screenshots/Exp12/17.png)
 
 ---
 
@@ -216,6 +225,8 @@ wordpress-848c87c44f-xxvhg   1/1     Running   0          14s  ← RECOVERED
 ```
 
 **Observation:** Pod `8mdmg` was killed. Kubernetes instantly created `xxvhg` as a replacement. Total replica count stayed at 4 — no manual action required.
+
+![ ](Screenshots/Exp12/18.png)
 
 ---
 
