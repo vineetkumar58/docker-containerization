@@ -60,18 +60,18 @@ volumes:
   db_data:
   wp_data:
 ```
+![ ](Screenshots/Exp11/11.png)
 
 ---
 
 ## Practical
 
-### Task 1 — Clean up previous containers
+### Task 1 and Task 2 — Clean up previous containers & Initialize Docker Swarm
 ```bash
 docker compose down -v
 ```
 Expected: empty container list.
 
-### Task 2 — Initialize Docker Swarm
 ```bash
 docker swarm init
 ```
@@ -84,7 +84,7 @@ Expected output:
 ID                            HOSTNAME         STATUS    AVAILABILITY   MANAGER STATUS
 m134s6mosmq10zwpnb00h7nk9 *   docker-desktop   Ready     Active         Leader
 ```
-
+![ ](Screenshots/Exp11/12.png)
 
 ---
 
@@ -100,6 +100,8 @@ Creating service wpstack_wordpress
 ```
 > In Swarm, we deploy **stacks** (groups of services) instead of individual containers.
 
+![ ](Screenshots/Exp11/13.png)
+
 ---
 
 ### Task 4 — Verify the Deployment
@@ -111,11 +113,15 @@ ID             NAME                MODE         REPLICAS   IMAGE
 tkumyqwm7pwg   wpstack_db          replicated   1/1        mysql:5.7
 tw0meroyixos   wpstack_wordpress   replicated   1/1        wordpress:latest   *:8081->80/tcp
 ```
+![ ](Screenshots/Exp11/14.png)
+
 ```bash
 docker service ps wpstack_wordpress
 docker ps
 ```
 Containers are now named `wpstack_wordpress.1.xxxxx` — managed by Swarm, not by you directly.
+
+![ ](Screenshots/Exp11/15.png)
 
 ---
 
@@ -123,6 +129,12 @@ Containers are now named `wpstack_wordpress.1.xxxxx` — managed by Swarm, not b
 Open browser at: **http://localhost:8081**
 
 Fill in the WordPress setup form and install. The application works identically even though Swarm is now managing it behind the scenes.
+
+![ ](Screenshots/Exp11/1.png)
+
+![ ](Screenshots/Exp11/2.png)
+
+![ ](Screenshots/Exp11/3.png)
 
 ---
 
@@ -149,6 +161,8 @@ wpstack_wordpress.3   Running   36 seconds ago
 ```
 All 3 containers share port 8081 through Swarm's **internal load balancer** — no port conflicts.
 
+![ ](Screenshots/Exp11/16.png)
+
 ---
 
 ### Task 7 — Test Self-Healing
@@ -169,6 +183,8 @@ wpstack_wordpress.3      Running    6 seconds ago       ← NEW (auto-created)
 ```
 Swarm detected the failure and launched a replacement automatically. Total replicas stayed at **3/3**.
 
+![ ](Screenshots/Exp11/17.png)
+
 ---
 
 ### Task 8 — Remove the Stack
@@ -186,6 +202,8 @@ docker service ls   # empty
 docker ps           # no containers
 ```
 > Volumes persist unless removed with `docker volume prune`.
+
+![ ](Screenshots/Exp11/18.png)
 
 ---
 
