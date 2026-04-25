@@ -68,11 +68,8 @@ volumes:
 ### Task 1 — Clean up previous containers
 ```bash
 docker compose down -v
-docker ps
 ```
 Expected: empty container list.
-
----
 
 ### Task 2 — Initialize Docker Swarm
 ```bash
@@ -87,6 +84,7 @@ Expected output:
 ID                            HOSTNAME         STATUS    AVAILABILITY   MANAGER STATUS
 m134s6mosmq10zwpnb00h7nk9 *   docker-desktop   Ready     Active         Leader
 ```
+
 
 ---
 
